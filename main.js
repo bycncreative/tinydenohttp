@@ -34,7 +34,7 @@ const defaultProxyItHandler = (req)=>proxy.proxyIt(req);
 
 const s = new TinyDenoHttpServer(host,port,SERVER_PATH);
 
-//s.proxyHandlerMap['/objects/'] = defaultProxyItHandler;
+//s.proxyHandlerMap['/api/'] = defaultProxyItHandler;
 let proxyPaths = getProxyUrlPathPrefix();
 console.log(proxyPaths)
 proxyPaths.forEach(p=>s.proxyHandlerMap[p]=defaultProxyItHandler);
